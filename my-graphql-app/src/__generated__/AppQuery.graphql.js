@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash b1f8157f6e6f2ea3abfddb6be9195c90
+ * @relayHash c1b5b04b2c64420eb42236b1bec5448b
  */
 
 /* eslint-disable */
@@ -9,29 +9,29 @@
 
 /*::
 import type { ConcreteRequest } from 'relay-runtime';
-type Link_viewer$ref = any;
-export type LinkListPageQueryVariables = {||};
-export type LinkListPageQueryResponse = {|
+type User_viewer$ref = any;
+export type AppQueryVariables = {||};
+export type AppQueryResponse = {|
   +users: $ReadOnlyArray<{|
-    +$fragmentRefs: Link_viewer$ref
+    +$fragmentRefs: User_viewer$ref
   |}>
 |};
-export type LinkListPageQuery = {|
-  variables: LinkListPageQueryVariables,
-  response: LinkListPageQueryResponse,
+export type AppQuery = {|
+  variables: AppQueryVariables,
+  response: AppQueryResponse,
 |};
 */
 
 
 /*
-query LinkListPageQuery {
+query AppQuery {
   users {
-    ...Link_viewer
+    ...User_viewer
     id
   }
 }
 
-fragment Link_viewer on User {
+fragment User_viewer on User {
   id
   username
   email
@@ -42,7 +42,7 @@ const node/*: ConcreteRequest*/ = {
   "kind": "Request",
   "fragment": {
     "kind": "Fragment",
-    "name": "LinkListPageQuery",
+    "name": "AppQuery",
     "type": "Query",
     "metadata": null,
     "argumentDefinitions": [],
@@ -58,7 +58,7 @@ const node/*: ConcreteRequest*/ = {
         "selections": [
           {
             "kind": "FragmentSpread",
-            "name": "Link_viewer",
+            "name": "User_viewer",
             "args": null
           }
         ]
@@ -67,7 +67,7 @@ const node/*: ConcreteRequest*/ = {
   },
   "operation": {
     "kind": "Operation",
-    "name": "LinkListPageQuery",
+    "name": "AppQuery",
     "argumentDefinitions": [],
     "selections": [
       {
@@ -106,12 +106,12 @@ const node/*: ConcreteRequest*/ = {
   },
   "params": {
     "operationKind": "query",
-    "name": "LinkListPageQuery",
+    "name": "AppQuery",
     "id": null,
-    "text": "query LinkListPageQuery {\n  users {\n    ...Link_viewer\n    id\n  }\n}\n\nfragment Link_viewer on User {\n  id\n  username\n  email\n}\n",
+    "text": "query AppQuery {\n  users {\n    ...User_viewer\n    id\n  }\n}\n\nfragment User_viewer on User {\n  id\n  username\n  email\n}\n",
     "metadata": {}
   }
 };
 // prettier-ignore
-(node/*: any*/).hash = '7f720f4a98f7edf3d0c8044281808d83';
+(node/*: any*/).hash = 'dc221e4f95b879c43379a619f030b021';
 module.exports = node;

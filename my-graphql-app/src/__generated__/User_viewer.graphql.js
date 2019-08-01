@@ -9,29 +9,27 @@
 /*::
 import type { ReaderFragment } from 'relay-runtime';
 import type { FragmentReference } from "relay-runtime";
-declare export opaque type LinkList_viewer$ref: FragmentReference;
-declare export opaque type LinkList_viewer$fragmentType: LinkList_viewer$ref;
-export type LinkList_viewer = $ReadOnlyArray<{|
+declare export opaque type User_viewer$ref: FragmentReference;
+declare export opaque type User_viewer$fragmentType: User_viewer$ref;
+export type User_viewer = {|
   +id: ?string,
   +username: string,
   +email: ?string,
-  +$refType: LinkList_viewer$ref,
-|}>;
-export type LinkList_viewer$data = LinkList_viewer;
-export type LinkList_viewer$key = {
-  +$data?: LinkList_viewer$data,
-  +$fragmentRefs: LinkList_viewer$ref,
+  +$refType: User_viewer$ref,
+|};
+export type User_viewer$data = User_viewer;
+export type User_viewer$key = {
+  +$data?: User_viewer$data,
+  +$fragmentRefs: User_viewer$ref,
 };
 */
 
 
 const node/*: ReaderFragment*/ = {
   "kind": "Fragment",
-  "name": "LinkList_viewer",
+  "name": "User_viewer",
   "type": "User",
-  "metadata": {
-    "plural": true
-  },
+  "metadata": null,
   "argumentDefinitions": [],
   "selections": [
     {
@@ -58,5 +56,5 @@ const node/*: ReaderFragment*/ = {
   ]
 };
 // prettier-ignore
-(node/*: any*/).hash = 'f5fed2f298ebbb0402840625186dc599';
+(node/*: any*/).hash = '88813d0e7ff80cd1d4d8762501a2388e';
 module.exports = node;

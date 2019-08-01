@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-import Link from './Link'
+import User from './User'
 
-class LinkList extends Component {
+class UserList extends Component {
 
   render() {
     return (
 	  <div>
         {this.props.viewer.map((user) =>		
-			<Link key={user.__id} viewer={user} />
+			<User key={user.__id} viewer={user} />
         )}
       </div>
     )
@@ -15,4 +15,4 @@ class LinkList extends Component {
 
 }
 
-export default LinkList
+export default UserList

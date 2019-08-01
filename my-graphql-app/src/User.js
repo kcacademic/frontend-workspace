@@ -4,12 +4,9 @@ import {
   graphql
 } from 'react-relay'
 
-class Link extends Component {
+class User extends Component {
 
   render() {
-	  
-	//console.log(this.props.user)
-	  
     return (
       <div>
         <div>{this.props.viewer.username} ({this.props.viewer.email})</div>
@@ -19,8 +16,8 @@ class Link extends Component {
   
 }
 
-export default createFragmentContainer(Link, {viewer: graphql`
-  fragment Link_viewer on User {
+export default createFragmentContainer(User, {viewer: graphql`
+  fragment User_viewer on User {
     id
     username
     email
